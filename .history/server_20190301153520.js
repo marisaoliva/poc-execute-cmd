@@ -11,7 +11,7 @@ var httpServer = http.createServer(function (req, resp) {
     
         var body = "";
         req.on("data", function (chunk) {
-            console.log(chunk.toString());
+            console.log(chunk);
             /*var readline = require('readline');
             var cp = require('child_process');
             var tail = cp.spawn('ls');
@@ -34,6 +34,6 @@ var httpServer = http.createServer(function (req, resp) {
 });
 
 // Http server listen on port 8888.
-httpServer.listen(8888);
+httpServer.listen(3000);
 
 console.log("Http web server listening on port 8888. Access it with url http://localhost:8888.");

@@ -56,7 +56,7 @@
                 var input2 = $("#input2").val();
                 comando='';
                 var comando =radio+" "+select+" "+input1+" "+input2;
-                $("#command").append(comando)
+                $("#command").append(commando);
                 $.post("http://localhost:8888",
                 {
                     comando: comando
