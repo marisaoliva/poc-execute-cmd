@@ -16,7 +16,6 @@ function onClickButton(){
 
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            debugger;
             $("#command").append(errorThrown)   
         }
 

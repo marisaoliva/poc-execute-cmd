@@ -19,10 +19,6 @@ var httpServer = http.createServer(function (req, resp) {
             lineReader.on('line', function(line) {
                 console.log(line);
             });
-
-            tail.on('close', function(code, signal) {
-                console.log('ls finished...');
-            });
         });
 
         req.on("end", function(){
