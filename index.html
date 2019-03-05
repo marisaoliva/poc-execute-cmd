@@ -5,17 +5,40 @@
             .alert{
                 width: 100%;
             }
+            .logo{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 200px;
+            }
+            .form{
+                margin: 100px;
+            }
+            h1{
+                margin-bottom: 60px;
+            }
+            .command{
+                margin-top: 100px;
+            }
+            .selenium{
+                position: relative;
+                top: -112px;
+                width: 50px;
+                left: -60px;
+            }
         </style>
     </head>
     <body>
-        <div class='container mt-4'>
-            <h1>POC morso</h1>
+        <div class='form'>
+            <h1>Test Launcher</h1>
+            <img class='selenium' src='img/selenium.jpg'>
+            <img class='logo' src='img/logo.png'/>
               <form">
                 <div class="mx-md-n5 mt-4">
                     <div class="form-check row mt-4">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="ls" checked>
                         <label class="form-check-label" for="exampleRadios1">
-                                ls
+                                Local
                         </label>
                     </div>
                     <div class="form-check row mt-4">
@@ -26,8 +49,7 @@
                     </div>
                     <div class='row mt-4'>
                         <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>-la</option>
+                            <option selected>-la</option>
                             <option>-x</option>
                         </select>
                     </div>
@@ -37,11 +59,11 @@
                     <div class="row mt-4">
                         <input type="text" class="form-control" id='input2' placeholder="Input 2">
                     </div>
-                    <div class='row mt-4'>
-                       <button type="button" class="btn btn-primary" onclick="onClickButton()">Enviar</button>
+                    <div class='row mt-4 float-right'>
+                       <button type="button" class="btn btn-success" onclick="onClickButton()">Enviar</button>
                     </div>
-                    <div class='row mt-5'>
-                        <div class="alert alert-dark" role="alert">
+                    <div class='row command'>
+                        <div class="alert alert-secondary" role="alert">
                             Comando: <span id='command'></span>
                         </div>
                     </div>

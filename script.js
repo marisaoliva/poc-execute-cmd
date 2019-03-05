@@ -4,7 +4,7 @@ function onClickButton(){
     var input1 = $("#input1").val();
     var input2 = $("#input2").val();
     
-    var comando =radio+" "+select;
+    var comando =radio+" "+select+" "+input1*" "+input2;
     
     $.ajax({
         url: "http://localhost:8888",
