@@ -11,19 +11,18 @@ var httpServer = http.createServer(function (req, resp) {
     
         var body = "";
         req.on("data", function (chunk) {
-            console.log(chunk.toString());
-            /*var readline = require('readline');
-            var cp = require('child_process');
-            var tail = cp.spawn('ls');
-            var lineReader = readline.createInterface(tail.stdout, tail.stdin);
 
+            var readline = require('readline');
+            var cp = require('child_process').exec;
+            var tail = cp(chunk.toString());
+            var lineReader = readline.createInterface(tail.stdout, tail.stdin);
             lineReader.on('line', function(line) {
                 console.log(line);
             });
-
             tail.on('close', function(code, signal) {
-                console.log('ls finished...');
-            });*/
+                
+            });
+            
         });
 
         req.on("end", function(){

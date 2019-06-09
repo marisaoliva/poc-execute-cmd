@@ -13,9 +13,9 @@
               <form">
                 <div class="mx-md-n5 mt-4">
                     <div class="form-check row mt-4">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="local" checked>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="ls" checked>
                         <label class="form-check-label" for="exampleRadios1">
-                                Local
+                                local
                         </label>
                     </div>
                     <div class="form-check row mt-4">
@@ -27,8 +27,8 @@
                     <div class='row mt-4'>
                         <select id="inputState" class="form-control">
                             <option selected>Choose...</option>
-                            <option>Hola</option>
-                            <option>Adios</option>
+                            <option>-la</option>
+                            <option>-x</option>
                         </select>
                     </div>
                     <div class="row mt-4">
@@ -56,11 +56,12 @@
                 var input2 = $("#input2").val();
                 comando='';
                 var comando =radio+" "+select+" "+input1+" "+input2;
-                $("#command").append(comando)
+                $("#command").append(radio)
+
+  
                 $.post("http://localhost:8888",
-                {
-                    comando: comando
-                });
+                    radio+" "+select,
+                    function(data,status,xhr){console.log('ole')})
 
             }
         
