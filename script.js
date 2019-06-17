@@ -5,23 +5,26 @@ function onClickButton(){
     var input2 = $("#input2").val();
     
     var comando =radio+" "+select+" "+input1+" "+input2;
+    postExecute(comando);
     
+}
+function postExecute(comando){
     $.ajax({
         url: "http://localhost:8888",
         type: "post",
         data: comando ,
         success: function (response) {
-            $("#command").append(comando);
-            console.log(comando)  
-            comando='';
-            
-                    
-
+            $("#command").text(comando);
+            $("#result").val(response); 
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            $("#command").append(errorThrown)   
+            $("#command").val(errorThrown)   
         }
 
 
     });
+}
+
+function onClickSH(comando){
+    postExecute(comando);
 }

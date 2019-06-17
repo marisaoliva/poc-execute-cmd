@@ -64,10 +64,17 @@
                     <div class='row mt-4 float-right'>
                        <button type="button" class="btn btn-success" onclick="onClickButton()">Enviar</button>
                     </div>
+                    <div class='row mt-4'>
+                        <button type="button" class="btn btn-success" onclick="onClickSH('sh console.sh')">Lanzar sh</button>
+                     </div>
                     <div class='row command'>
                         <div class="alert alert-secondary" role="alert">
                             Comando: <span id='command'></span>
                         </div>
+                    </div>
+                    <div class='row '>
+                        <label for="exampleFormControlTextarea1">Resultado comando</label>
+                         <textarea id="result" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
                     </div>
                 </div>
               </form>
